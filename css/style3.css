@@ -1,0 +1,201 @@
+/* 
+GENERAL
+------------------------------------------------ 
+*/
+body {
+  background: url('../img/bg9.jpg') no-repeat;
+  background-size: cover;
+  font: 400 18px/1.5 'Quicksand', sans-serif;
+  color: #333;
+}
+
+.container {
+  margin: 60px auto;
+  max-width: 640px;
+  padding: 0 15px;
+}
+
+/* 
+INPUT BOX 
+------------------------------------------------
+*/
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  padding: 15px 15px 15px 35px;
+  width: 100%;
+  height: 50px;
+  color: #333;
+  transition: border 0.3s linear, color 0.3s linear;
+  font: 400 18px/1.5 'Quicksand', sans-serif;
+}
+
+input[type="text"] + .fas,
+input[type="password"] + .fas,
+input[type="email"] + .fas {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: color 0.3s linear;
+  color: #333;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: #1E8BC3;
+  color: #1E8BC3;
+}
+
+input[type="text"]:focus + .fas,
+input[type="password"]:focus + .fas,
+input[type="email"]:focus + .fas {
+  color: #1E8BC3; 
+}
+
+/* 
+BUTTON 
+------------------------------------------------
+*/
+.btn {
+  background: #1E8BC3;
+  border: none;
+  color: #fff;
+  padding: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+  font: 400 18px/1.5 'Quicksand', sans-serif;
+  transition: background 0.3s linear;
+}
+
+.btn:hover {
+  background: #2574A9;
+}
+
+.btn:focus,
+.forgotPwd:focus {
+  outline: 1px dotted #333;
+}
+
+/* 
+INPUT BOX PLACEHOLDER COLORS 
+------------------------------------------------
+*/
+::placeholder { 
+  color: #333;
+  opacity: 1; 
+}
+
+:-ms-input-placeholder { 
+  color: #333;
+}
+
+::-ms-input-placeholder {
+  color: #333;
+}
+
+/* 
+CUSTOM CHECKBOX 
+------------------------------------------------
+*/
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0 0 0 30px;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+  content: '';
+  background: #ddd;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900;
+  color: #1E8BC3;
+  position: absolute;
+  top: -4px;
+  left: 2px;
+  opacity: 0;
+  transition: opacity 0.3s linear, transform 0.3s linear;
+  transform: scale(1.5);
+}
+
+input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+input[type="checkbox"]:checked:focus + label:before,
+input[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #333;
+}
+
+/* 
+LOGIN FORM 
+------------------------------------------------
+*/
+.formholder {
+  background: rgba(255,255,255,0.6);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.formholder .titleHolder {
+  margin: 0 0 50px;
+}
+
+.formholder .titleHolder .far {
+  font-size: 70px;
+  margin: 0 0 20px;
+}
+
+.formholder h1 {
+  font-size: 40px;
+  margin: 0 0 10px;
+}
+
+.formholder a {
+  color: #333;
+  transition: color 0.3s linear;
+}
+
+.formholder a:hover {
+  color: #2574A9;
+}
+
+.formholder .row {
+  position: relative;
+  margin: 0 0 20px;
+}
+
+.formholder form {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.formholder form a {
+  font-size: 14px;
+}
